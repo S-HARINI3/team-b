@@ -65,11 +65,11 @@ const Register = () => {
       formData.append("password", form.password);
       formData.append("role", form.role);
       formData.append("location", form.location);
- 
+
       if (form.idFile) {
         formData.append("idFile", form.idFile);
       }
- 
+
       await API.post("/auth/register", formData, {
         headers: {
           "Content-Type": "multipart/form-data"
